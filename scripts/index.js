@@ -18,8 +18,11 @@ function onSubmit(event) {
   document
     .getElementById("player2")
     .getElementsByClassName("heading")[0].innerHTML = secondPlayerName;
+
+
+    document.getElementsByClassName("nav-bar")[0].style.visibility = "visible";
 }
-// ----------------------------------
+// ----------------------------------****-----------------------------
 
 function restartGame(){
 
@@ -41,35 +44,40 @@ function restartGame(){
     let inside = '<h1 class="heading">'
       +playerName 
       +'</h1><h1 class="score">0</h1><div class="dice">'
-      +'<img src="../images/dice1.png"/></div><div class="input-group button" id="player-'+i+'-button">'
+      +'<img src="images/dice1.png"/></div><div class="input-group button" id="player-'+i+'-button">'
       +'<input type="button" value="Roll Dice" onclick="rollDice('+i+')" '
       +disable_attr
       +'/></div>';
+
       playerNodes.innerHTML = inside;
 
     // playerNodes
     //    .querySelector(".dice img")
-    //    .setAttribute("src", `../images/dice1.png`);
+    //    .setAttribute("src", `images/dice1.png`);
     // playerNodes.getElementsByClassName("score")[0].innerHTML = 0;
 
     // playerNodes
     // .getElementsByTagName("input")[0]
     // .setAttribute("disabled", true);
 
-  }//for end
+  }// endfor
 
   
   console.log('totalscore: '+totalScore)
  
 }
 
-// ----------------------------------
+
+function newGame(){
+  window.location.reload();
+}
+// ----------------------------------xxxx----------------
 function rollDice(playerIndex) {
   const randomNumber = getRandom();
   const playerNodes = document.getElementById(`player${playerIndex}`);
   playerNodes
     .querySelector(".dice img")
-    .setAttribute("src", `../images/dice${randomNumber}.png`);
+    .setAttribute("src", `images/dice${randomNumber}.png`);
   switch (playerIndex) {
     case 1:
       firstPlayerScore += randomNumber;
