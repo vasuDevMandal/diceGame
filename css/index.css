@@ -48,7 +48,7 @@
 .container {
   max-width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to top left,#fff,rgb(0, 58, 184));/*linear-gradient(to right, #ff4b2b, #ff416c);*/
 }
 
 .dice-game {
@@ -86,16 +86,19 @@
 
 .input-boxes {
   margin-top: 30px;
-  width: 60%;
+  width: 50%;
+  /* border:1px solid #000; */
 }
 
 .input-group {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: auto;
   width: 100%;
   margin: 10px 0;
   position: relative;
+  /* border:1px solid #000; */
+  justify-content: center;
 }
 
 .input-group input {
@@ -103,21 +106,42 @@
   width: 100%;
   outline: none;
   border: none;
-  padding: 0 30px;
+  padding: 20px;
   font-size: 16px;
   font-weight: 500;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+
+.input-group input[type="submit"]{
+  position: relative;
+  width: 30vh;
+  display: flex;
+  height: 10vh;
+  padding: 2vh;
+  font-size: 2em;
+  color : rgb(0, 58, 184);
+  border: 2px solid rgb(0, 58, 184);
+  background-color: #fff;
+  justify-content: center;
+}
+
+.input-group input[type="submit"]:hover{
+  box-shadow: 0 0 10px 0 #000;
+  border: 2px solid transparent;
+  color: #fff;
+  ;
+}
+
 .input-group input:focus {
-  border-color: #ff4b2b;
+  border-color: rgb(0, 58, 184);
 }
 
 .input-group i {
-  position: absolute;
-  color: #ff4b2b;
+  color: rgb(0, 58, 184);
   font-size: 17px;
 }
+
 
 .button {
   margin-top: 40px;
@@ -125,7 +149,7 @@
 
 .button input {
   color: #ffffff;
-  background: #ff4b2b;
+  background: rgb(0, 58, 184);
   border-radius: 5px;
   padding: 0;
   cursor: pointer;
@@ -133,7 +157,7 @@
 }
 
 .button input:hover {
-  background: linear-gradient(to right, #eb3349, #f45c43);
+  background: rgb(0, 58, 184);
 }
 
 .board-container {
@@ -193,8 +217,12 @@
 #player-1-button,
 #player-2-button{
     width: 50%;
+    height: 10vh;
 }
-
+#player-1-button:hover,
+#player-2-button:hover{
+    box-shadow: 0 0 2vh 0 black;
+}
 #player-1-button input[disabled],
 #player-2-button input[disabled] {
   background: #f5f5f5;
