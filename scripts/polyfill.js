@@ -39,3 +39,20 @@ String.prototype.mySplit = (sep = "") => {
 
 const str = "this is osme string";
 console.log(str.mySplit(" "));
+
+//myJoin
+
+Array.prototype.myJoin=function(str = ''){
+    const arr=this;
+    let val='';
+    for(let i=0;i<arr.length-1;i++){
+        val +=""+arr[i]+str;
+    }
+    val +=""+arr[arr.length-1];
+    return val;
+}
+let arr=[];
+let arr2=arr.myJoin(' ');
+console.log(str);
+
+
