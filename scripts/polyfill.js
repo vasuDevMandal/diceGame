@@ -18,25 +18,24 @@ console.log(array);
 // mySplit
 
 String.prototype.mySplit = (sep = "") => {
-  const res = [];
+  const reserve = [];
   let temp = "";
   for (let i = 0; i < str.length; i++) {
-    const el = str[i];
-    if (el === sep || (sep === "" && temp)) {
-      res.push(temp);
+    const ele = str[i];
+    if (ele === sep || (sep === "" && temp)) {
+      reserve.push(temp);
       temp = "";
     }
-    if (el !== sep) {
-      temp += el;
+    if (ele !== sep) {
+      temp += ele;
     }
   }
   if (temp) {
-    res.push(temp);
+    reserve.push(temp);
     temp = "";
   }
-  return res;
+  return reserve;
 };
-
 
 const str = "this is osme string";
 console.log(str.mySplit(" "));
